@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Election System - Cast Your Vote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <h1>Welcome to Online Election System</h1>
+    <div class="container">
+    <h3>Enter your Details:</h3>
+    <form action="/submit_vote" method="post">
+        <label for="candidate_name">Candidate Name</label>
+        <input type="text" id="candidate_name" name="candidate_name" required><br><br>
+        <label for="voter_id">Voter ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="voter_id" name="voter_id" required><br><br><br>
+        <h3>Cast Your Vote :</h3>
+        <h3>Candidates:</h3><br>
+        <div class="candidate-list">
+            <div class="candidate">
+                <input type="radio" id="candidate1" name="candidate" value="candidate1">
+                <label for="candidate1">Candidate 1</label>
+            </div>
+            <div class="candidate">
+                <input type="radio" id="candidate2" name="candidate" value="candidate2">
+                <label for="candidate2">Candidate 2</label>
+            </div>
+            <div class="candidate">
+                <input type="radio" id="candidate3" name="candidate" value="candidate3">
+                <label for="candidate3">Candidate 3</label>
+            </div>
+            <!-- Add more candidates as needed -->
+        <div class="candidate">
+            <input type="radio" id="candidate4" name="candidate" value="candidate4">
+            <label for="candidate4">Candidate 4</label>
+        </div>
+        </div><br>
+
+        <div class="form-buttons">
+        <button type="submit" onclick="castVote()">Cast Vote<br></button>
+        <button type="button" onclick="showResults()">Show Results</button>
+        </div>
+    </form>
+    </div>
+    <div id="results" class="results-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

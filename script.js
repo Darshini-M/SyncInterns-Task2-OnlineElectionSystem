@@ -21,7 +21,7 @@ function castVote() {
 
   const voteValue = selectedCandidate.value;
   votes[voteValue]++;
-  alert("Vote cast successfully!");
+  alert("Vote casted successfully!");
   selectedCandidate.checked = false;
 }
 

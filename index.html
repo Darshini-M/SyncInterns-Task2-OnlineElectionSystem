@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Election System - Cast Your Vote</title>
+    <title>Online Election System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   
-    <h1>Welcome to Online Election System</h1>
-    <div class="container">
-    <h3>Enter your Details:</h3>
-    <form action="/submit_vote" method="post">
-        <label for="candidate_name">Candidate Name</label>
+    <h1 style="color: black;">Welcome to the Online Election</h1>
+    <div class="decorative-border">
+    <div class="box-container">
+        <div class="h3">
+    <h3>Enter your Details:</h3> </div>       
+    <form id="votingForm" action="/submit_vote" method="post">
+        <label for="candidate_name">Candidate Name</label>&nbsp;
         <input type="text" id="candidate_name" name="candidate_name" required><br><br>
-        <label for="voter_id">Voter ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" id="voter_id" name="voter_id" required><br><br><br>
-        <h3>Cast Your Vote :</h3>
-        <h3>Candidates:</h3><br>
+        <label for="voter_id">Voter ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="voter_id" name="voter_id" required><br><br></form>
+        <h3>Choose Candidate:</h3>
+        <h3 id="heading">Candidates:</h3>
         <div class="candidate-list">
             <div class="candidate">
                 <input type="radio" id="candidate1" name="candidate" value="candidate1">
@@ -36,13 +37,20 @@
         </div>
         </div><br>
 
-        <div class="form-buttons">
-        <button type="submit" onclick="castVote()">Cast Vote<br></button>
-        <button type="button" onclick="showResults()">Show Results</button>
+        <button onclick="castVote()"  style="font-size: larger;">Vote</button>
+        <button id="show-result-btn" onclick="showResults()" style="font-size: larger;">Show Results</button><br>
+
+        <div class="sbs">
+        <h2 style="color: black;">Total Votes:</h2>
+        <div id="voteResults"></div>
+
+        <h2 style="color: black;">Winner:</h2>
+        <div id="winner"></div>
         </div>
-    </form>
     </div>
-    <div id="results" class="results-container"></div>
-    <script src="script.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
 </body>
-</html>
+</html> 

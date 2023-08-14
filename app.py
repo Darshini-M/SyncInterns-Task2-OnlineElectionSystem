@@ -6,7 +6,8 @@ app = Flask(__name__)
 votes = {
     "candidate1": 0,
     "candidate2": 0,
-    "candidate3": 0
+    "candidate3": 0,
+    "candidate4": 0,
 }
 
 @app.route('/')
